@@ -1,0 +1,137 @@
+{
+ "metadata": {
+  "signature": "sha256:dfd940dfc815fd0283fd4fec0695e0b8ba39ed82dcfdb8103ccb8c31cb796573"
+ },
+ "nbformat": 3,
+ "nbformat_minor": 0,
+ "worksheets": [
+  {
+   "cells": [
+    {
+     "cell_type": "markdown",
+     "id": "42CC4F8DD8054F1EA99D8026381B8395",
+     "metadata": {},
+     "source": [
+      "# 1. \u57fa\u672c\u601d\u60f3\n",
+      "\n",
+      "- \u4f20\u7edf\u901a\u9053\u7a81\u7834\u7b56\u7565\u662f\u5efa\u7acb\u5728\u901a\u9053\u7a81\u7834\u601d\u60f3\u4e0a\u7684\uff0c\u7a81\u7834\u4e0a\u8f68\u505a\u591a\uff1b\u4e0b\u7834\u4e0b\u8f68\u505a\u7a7a\u3002\u4f46\u662f\u901a\u9053\u7a81\u7834\u7cfb\u7edf\u4e3b\u8981\u7684\u95ee\u9898\u5728\u4e8e\u5047\u7a81\u7834\u3002\u5047\u7a81\u7834\u4e2d\uff0c\u901a\u9053\u7684\u7a81\u7834\u5e76\u6ca1\u6709\u5e26\u6765\u8d8b\u52bf\u7684\u786e\u5b9a\uff0c\u53cd\u800c\u662f\u4ef7\u683c\u52a8\u80fd\u7684\u8870\u7aed\uff0c\u4f1a\u8fc5\u901f\u56de\u843d\u5e76\u53cd\u5411\u8fd0\u52a8\u3002\n",
+      "- \u91d1\u80af\u7279\u7eb3\u4ea4\u6613\u7cfb\u7edf\u9488\u5bf9\u5047\u7a81\u7834\u95ee\u9898\u8fdb\u884c\u4e86\u6539\u8fdb\u3002\u91d1\u80af\u7279\u7eb3\u4ea4\u6613\u7cfb\u7edf\u5728\u79fb\u52a8\u5e73\u5747\u7ebf\u9644\u8fd1\u8bbe\u7f6e\u4e86\u4e00\u4e2a\u6b62\u635f\uff0c\u4ee5\u9650\u5236\u5047\u7a81\u7834\u9020\u6210\u7684\u635f\u5931\u3002\u5177\u4f53\u800c\u8a00\uff0c\u4e09\u4ef7\uff08\u6700\u9ad8\u4ef7\u3001\u6700\u4f4e\u4ef7\u548c\u6536\u76d8\u4ef7\uff09\u5747\u7ebf\u5411\u4e0a\uff0c\u5e76\u4e14\u4ef7\u683c\u4e0a\u7834\u901a\u9053\u4e0a\u8f68\uff0c\u4e70\u5165\u80a1\u7968\uff0c\u4ef7\u683c\u4e0b\u7834\u4e09\u4ef7\u5747\u7ebf\uff0c\u5356\u51fa\u80a1\u7968\u3002\u5176\u4e2d\u4e0a\u8f68=\u4e09\u4ef7\u5747\u7ebf+\u771f\u5b9e\u632f\u5e45\u7684\u79fb\u52a8\u5e73\u5747\u503c"
+     ]
+    },
+    {
+     "cell_type": "markdown",
+     "id": "87ED779646C9485E9982431D554E7B0E",
+     "metadata": {},
+     "source": [
+      "# 2. \u64cd\u76d8\u7b56\u7565\n",
+      "\n",
+      "**\u5165\u573a\u6761\u4ef6**\t\n",
+      "* \u4e09\u4ef7\u5747\u7ebf\u5411\u4e0a\uff0c\u5e76\u4e14\u4ef7\u683c\u4e0a\u7834\u901a\u9053\u4e0a\u8f68\uff0c\u4e70\u5165\u80a1\u7968\n",
+      "\n",
+      "**\u51fa\u573a\u6761\u4ef6**\t\n",
+      "* \u4ef7\u683c\u4e0b\u7834\u4e09\u4ef7\u5747\u7ebf\uff0c\u5356\u51fa\u80a1\u7968\n"
+     ]
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "id": "2F10464FEED04D1DB5F9AF281ED481A5",
+     "input": [
+      "def trading(tradingDic,context):   \n",
+      " \n",
+      " \"\"\"\n",
+      " \u4ed3\u4f4d\u7ba1\u7406\uff1a\u5355\u53ea\u80a1\u7968\u7684\u4e70\u5165\u9650\u989d\u4e3a\u5168\u90e8\u8d44\u91d1\u768410%\n",
+      " \"\"\"\n",
+      "    \n",
+      " #\u6570\u636e\u83b7\u53d6\uff08\u901a\u7528\u90e8\u5206\uff09\uff1a\u6295\u8d44\u8005\u8d26\u6237\uff0c\u53ef\u4f9b\u4ea4\u6613\u7684\u80a1\u7968\uff0c\u6295\u8d44\u8005\u6301\u4ed3\u53ca\u4ea4\u6613\u6570\u636e\n",
+      " account = context.get_account('fantasy_account')                                        #\u83b7\u53d6\u6295\u8d44\u8005\u7684\u80a1\u7968\u8d26\u6237\uff08fantasy_account\uff09\n",
+      " current_universe = context.get_universe(asset_type = 'stock',exclude_halt=True)         #\u83b7\u53d6\u5f53\u524d\u9664\u505c\u724c\u5916\u7684\u6240\u6709\u53ef\u4f9b\u6295\u8d44\u80a1\u7968\uff08universe\uff09   \n",
+      " security_position = account.get_positions()                                             #\u5b57\u5178\u578b\u6570\u636e\uff0c\u4e0a\u4e00K\u7ebf\u7ed3\u675f\u540e\u7684\u6709\u6548\u8bc1\u5238\u5934\u5bf8\uff0c\u5373\u6301\u4ed3\u6570\u91cf\u5927\u4e8e0\u7684\u8bc1\u5238\u53ca\u5176\u5934\u5bf8\n",
+      " cash = account.cash                                                                     #\u83b7\u53d6\u80a1\u7968\u8d26\u6237\u53ef\u7528\u4e8e\u6295\u8d44\u7684\u73b0\u91d1\u989d\u5ea6\n",
+      " buylist = tradingDic.get('buyList')                                                     #\u83b7\u53d6\u8d2d\u5165\u80a1\u7968\u6570\u636e\n",
+      " selllist = tradingDic.get('sellList')                                                   #\u83b7\u5f97\u5356\u51fa\u80a1\u7968\u6570\u636e\n",
+      "    \n",
+      " #\u4ea4\u6613\u6267\u884c\u90e8\u5206\uff1a\u5356\u51fa\n",
+      " for sec in current_universe:\n",
+      "    if sec in selllist and sec in security_position:                                    #\u5728selllist\u4e2d\uff0c\u4e14\u6709\u6301\u4ed3\uff0c\u5356\u51fa        \n",
+      "        order_to(sec,0)                                                                 #\u6267\u884c\u5356\u51fa\u6307\u4ee4\u540e,\u4f1a\u81ea\u52a8\u66f4\u65b0\u80a1\u7968\u8d26\u6237\u4e2d\u7684\u91d1\u989d\n",
+      " #\u4ea4\u6613\u6267\u884c\u90e8\u5206\uff1a\u4e70\u5165\n",
+      " if len(buylist) > 0:                                                                   #\u5224\u8bfb\u672c\u671f\u662f\u5426\u6709\u9700\u8981\u4e70\u5165\u80a1\u7968\uff08buylist>0\uff09\n",
+      "        weight = min(Max_Position_per,1.0/len(buylist))                                #\u6bcf\u53ea\u80a1\u7968\u6240\u5206\u914d\u7684\u91d1\u989d\u76f8\u540c\uff0c\u4f46\u6700\u591a\u4e3a\u603b\u91d1\u989d\u768410%\n",
+      " else:\n",
+      "     weight = 0                                                                         #\u82e5\u672c\u671f\u6ca1\u6709\u8981\u8d2d\u5165\u80a1\u7968\uff0c\u8bbe\u7f6e\u5206\u914d\u6743\u91cd\u4e3a0\n",
+      " for sec in buylist:                                                                    #\u5224\u65ad\u80a1\u7968\u662f\u5426\u4e3a\u672c\u671f\u8981\u8d2d\u5165\u80a1\u7968\u4e14\u5c1a\u672a\u6301\u6709\n",
+      "     if sec not in security_position:\n",
+      "        order_pct_to(sec,weight)                                                        #\u8d2d\u5165\u6307\u5b9a\u6bd4\u4f8b\u7684\u80a1\u7968         "
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "id": "4948949A718F409FB002B638A133ACDC",
+     "input": [
+      "def timing_CK(context):\n",
+      "    \"\"\"\n",
+      "    \u4e09\u4ef7\u5747\u7ebf\u5411\u4e0a\uff0c\u5e76\u4e14\u4ef7\u683c\u5411\u4e0a\u7a81\u7834\u4e0a\u8f68\uff0c\u5f00\u591a\u5355\uff1b\u6301\u6709\u591a\u5355\u65f6\uff0c\u5e76\u4e14\u4ef7\u683c\u5411\u4e0b\u7a81\u7834\u4e09\u4ef7\u5747\u7ebf\uff0c\u5e73\u591a\u5355\n",
+      "    \"\"\"\n",
+      "    #\u6570\u636e\u83b7\u53d6\uff08\u901a\u7528\u90e8\u5206\uff09\uff1a\u6295\u8d44\u8005\u8d26\u6237\uff0c\u53ef\u4f9b\u6295\u8d44\u80a1\u7968\uff0c\u4ef7\u683c\u6570\u636e\uff0c\u6301\u4ed3\u6570\u636e\uff0c\u8d26\u6237\u91d1\u989d\u6570\u636e\n",
+      "    account = context.get_account('fantasy_account')                                              #\u83b7\u53d6\u6295\u8d44\u8005\u7684\u80a1\u7968\u8d26\u6237\uff08fantasy_account\uff09\n",
+      "    current_universe = context.get_universe(asset_type = 'stock',exclude_halt=True)               #\u83b7\u53d6\u5f53\u524d\u9664\u505c\u724c\u5916\u7684\u6240\u6709\u53ef\u4f9b\u6295\u8d44\u80a1\u7968\uff08universe\uff09 \n",
+      "    history = context.history(current_universe,['closePrice','lowPrice','highPrice'],Max_time_range, rtype='array')   #\u6784\u5efa\u91d1\u80af\u7279\u7eb3\u4ea4\u6613\u7cfb\u7edf\u65f6\u8003\u8651\u8fc7\u53bbMax_time_range\u7684\u5386\u53f2\u6570\u636e\n",
+      "    security_position = account.get_positions()                                                   #\u5b57\u5178\u6570\u636e\uff0c\u4e0a\u4e00K\u7ebf\u7ed3\u675f\u540e\u7684\u6709\u6548\u8bc1\u5238\u5934\u5bf8\uff0c\u5373\u6301\u4ed3\u6570\u91cf\u5927\u4e8e0\u7684\u8bc1\u5238\u53ca\u5176\u5934\u5bf8\n",
+      "    \n",
+      "    #\u6309\u7167\u91d1\u80af\u7279\u7eb3\u4ea4\u6613\u7cfb\u7edf\u5faa\u73af\u5904\u7406\u6240\u6709\u8bc1\u5238\u6c60\u4e2d\u80a1\u7968\n",
+      "    buylist = []                                                                                  #\u521d\u59cb\u5316\u8d2d\u4e70\u80a1\u7968\u5217\u8868\n",
+      "    selllist = []                                                                                 #\u521d\u59cb\u5316\u5356\u51fa\u80a1\u7968\u5217\u8868\n",
+      "    for sec in current_universe:                                                                  #\u904d\u5386\u6240\u6709\u53ef\u4f9b\u6295\u8d44\u80a1\u7968\uff1b\u6ce8\uff1a\u5982\u8be5\u7b56\u7565\u6267\u884c\u4e86\u9009\u80a1\u7b56\u7565\uff0c\u8be5\u90e8\u5206\u5e94\u904d\u5386\u88ab\u9009\u4e2d\u80a1\u7968\n",
+      "    \n",
+      "    #\u6570\u636e\u83b7\u53d6\uff08\u4e13\u6709\u90e8\u5206\uff09\uff1a\u6700\u4f4e\u4ef7\uff0c\u6700\u9ad8\u4ef7\uff0c\u6536\u76d8\u4ef7\n",
+      "        close = history[sec]['closePrice']                                                          #\u83b7\u53d6\u80a1\u7968sec\u8fc7\u53bbMax_time_range\u5929\u7684\u6536\u76d8\u4ef7\n",
+      "        low   = history[sec]['lowPrice']                                                            #\u83b7\u53d6\u80a1\u7968sec\u8fc7\u53bbMax_time_range\u5929\u7684\u6700\u4f4e\u4ef7\n",
+      "        high  = history[sec]['highPrice']                                                           #\u83b7\u53d6\u80a1\u7968sec\u8fc7\u53bbMax_time_range\u5929\u7684\u6700\u9ad8\u4ef7 \n",
+      "    \n",
+      "    #\u6570\u636e\u5904\u7406\uff08\u7b56\u7565\u90e8\u5206\uff09\uff1a\u8ba1\u7b97\u771f\u5b9e\u6ce2\u5e45\uff0c\u901a\u9053\u4e0a\u8f68\u4ee5\u53ca\u79bb\u573a\u70b9\n",
+      "        atr = ta.ATR(high, low, close, atrlength)[-1]                                               #\u8ba1\u7b97\u771f\u5b9e\u6ce2\u5e45\n",
+      "        movavgval = ta.MA((high+low+close)/3, avglength)                                            #\u8ba1\u7b97\u6700\u9ad8\u3001\u6700\u4f4e\u548c\u6536\u76d8\u4ef7\u4e09\u4ef7\u5747\u7ebf\n",
+      "        upband = movavgval[-1] + atr                                                                #\u57fa\u4e8e\u771f\u5b9e\u6ce2\u5e45\u7684\u901a\u9053\u4e0a\u8f68\n",
+      "        liquidpoint = movavgval                                                                     #\u79bb\u573a\u70b9\u4e3a\u4e09\u4ef7\u5747\u503c\n",
+      "    #\u7b56\u7565\u90e8\u5206\uff1a\u4e09\u4ef7\u5747\u7ebf\u5411\u4e0a\uff0c\u5e76\u4e14\u4ef7\u683c\u5411\u4e0a\u7a81\u7834\u4e0a\u8f68\uff0c\u5f00\u591a\u5355\uff1b\u6301\u6709\u591a\u5355\u65f6\uff0c\u5e76\u4e14\u4ef7\u683c\u5411\u4e0b\u7a81\u7834\u4e09\u4ef7\u5747\u7ebf\uff0c\u5e73\u591a\u5355\n",
+      "        if  movavgval[-1] > movavgval[-2] and high[-1] >= upband and sec not in security_position:  #\u4e09\u4ef7\u5747\u7ebf\u5411\u4e0a\uff0c\u5e76\u4e14\u4ef7\u683c\u5411\u4e0a\u7a81\u7834\u4e0a\u8f68\uff0c\u5f00\u591a\u5355\n",
+      "            buylist.append(sec)                                                                    #\u5c06\u80a1\u7968\u52a0\u5165buylist\n",
+      "        elif low[-1] <= liquidpoint[-1] and sec in security_position:                               #\u6301\u6709\u591a\u5355\u65f6\uff0c\u5e76\u4e14\u4ef7\u683c\u5411\u4e0b\u7a81\u7834\u4e09\u4ef7\u5747\u7ebf\uff0c\u5e73\u591a\u5355\n",
+      "            selllist.append(sec)                                                                   #\u5c06\u80a1\u7968\u52a0\u5165selllist\n",
+      "\n",
+      "    #\u8fd4\u56de\u4ea4\u6613\u5b57\u5178\n",
+      "    TradingDic={'buyList':buylist,'sellList':selllist}                                            #TradingDic \u4e3a\u5b57\u5178\u578b\u53d8\u91cf\uff0c\u4ee5listName\u4e3akey\uff0clist\u4e3aValue    \n",
+      "    return TradingDic                                                                             #\u8fd4\u56de\u4ea4\u6613\u5b57\u5178"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    },
+    {
+     "cell_type": "strategy",
+     "collapsed": false,
+     "has_detail": true,
+     "id": "uqer_2C877B673CEF461E8",
+     "input": "#\u52a0\u8f7d\u5e93\u51fd\u6570\nimport numpy as np\nimport pandas as pd                   \nimport talib as ta                    # \u52a0\u8f7d\u6280\u672f\u5206\u6790\u5e93\n\n#\u521d\u59cb\u5316\u56de\u6d4b\u73af\u5883\nstart = '20150201'                    # \u56de\u6d4b\u8d77\u59cb\u65f6\u95f4 \u6ce8\uff1a\u652f\u6301\u4e24\u79cd\u65e5\u671f\u8868\u8ff0\u5f62\u5f0f\uff08 '2015-01-01'\uff0c'20150101'\uff09\nend = '20150601'                      # \u56de\u6d4b\u7ed3\u675f\u65f6\u95f4\nbenchmark = 'HS300'                   # \u7b56\u7565\u53c2\u8003\u6807\u51c6\u4e3aHS300\u6307\u6570\nuniverse = DynamicUniverse('HS300').apply_filter(Factor.PE.nlarge(100))   # \u8bc1\u5238\u6c60\uff1a\u53ef\u4f9b\u9009\u62e9\u7684\u80a1\u7968\u7684\u8303\u56f4\u4e3aHS300\u6210\u4efd\u80a1\u4e2dPE\u6700\u5927\u7684100\u53ea\u80a1\u7968\nfreq = 'd'                            # \u7528\u65e5\u7ebf\u56de\u6d4b\u7684\u7b56\u7565\nrefresh_rate = 1                      # \u6bcf11\u65e5\u8c03\u4e00\u6b21\u4ed3\uff0c\u5373\u6bcf\u4e2a\u4ea4\u6613\u65e5\u90fd\u4f1a\u8fd0\u884c\u7b2c\u4e09\u90e8\u5206\u7684handle_data\u51fd\u6570\n\n#\u521d\u59cb\u5316\u6295\u8d44\u8005\uff08\u8d26\u6237\uff09\u53c2\u6570\n#accounts\u4e3a\u5b57\u5178\u7c7b\u578b\uff0c\u4ee3\u8868\u6295\u8d44\u8005\u6240\u6709\u7684\u8d26\u6237\uff0c\u800c\u5b57\u5178\u4e2d\u6bcf\u4e00\u4e2a\u952e\u4ee3\u8868\u4e00\u4e2a\u8d26\u6237\uff0c\u800c\u6bcf\u4e00\u4e2a\u952e\u5bf9\u5e94\u7684\u503c\u4e3a\u8be5\u8d26\u6237\u7684\u521d\u59cb\u60c5\u51b5\uff0c\u5982\u672c\u7a0b\u5e8f\u4e2d\u7684\u952e\u4e3afantasy_account\uff08\u80a1\u7968\u8d26\u6237\uff09\uff0c\u503c\u4e3a\u76f8\u5e94\u914d\u7f6e\naccounts = {\n    'fantasy_account': AccountConfig(account_type='security', capital_base=10000000)  #\u521d\u59cb\u5316\u6295\u8d44\u8005\u7684\u80a1\u7968\u8d26\u6237\uff1a \u6295\u8d44\u54c1\u79cd\u4e3a\u80a1\u7968\uff0c\u521d\u59cb\u6295\u8d44\u91d1\u989d\u4e3a1\u5343\u4e07\n}\n\n#\u521d\u59cb\u5316\u7b56\u7565\u53c2\u6570:\nMax_Position_per = 0.1             # \u6bcf\u53ea\u80a1\u7968\u8d2d\u5165\u7684\u6700\u9ad8\u6bd4\u4f8b\u4e3a10%\nmax_history_window = 250           # \u8bbe\u7f6e\u6700\u957f\u56de\u6d4b\u5468\u671f\nMax_time_range = 60                # \u6784\u5efa\u7b56\u7565\u6700\u957f\u56de\u770b\u65f6\u95f4\natrlength  = 20                    # \u8ba1\u7b97\u771f\u5b9e\u6ce2\u5e45\u6240\u9700\u65f6\u95f4\u5468\u671f\navglength = 20                     # \u8ba1\u7b97\u4e09\u4ef7\u5747\u503c\u6240\u9700\u65f6\u95f4\u5468\u671f\n\n\n#\u521d\u59cb\u5316\u56de\u6d4b\u73af\u5883\uff0c\u6307\u660e\u521b\u5efa\u8d26\u6237\u65f6\u7684\u5de5\u4f5c\uff0c\u5168\u5c40\u53ea\u8fd0\u884c\u4e00\u6b21\ndef initialize(context):\n    pass\n        \n#handle_data\u51fd\u6570\u662f\u7b56\u7565\u7684\u6838\u5fc3\u51fd\u6570\uff0c\u5305\u542b\u4e86\u6240\u6709\u7b56\u7565\u7b97\u6cd5\u7684\u5185\u5bb9\uff0c\u5305\u62ec\u6570\u636e\u83b7\u53d6\uff0c\u4ea4\u6613\u4fe1\u53f7\u751f\u6210\uff0c\u8ba2\u5355\u59d4\u6258\u7b49\u903b\u8f91\u3002\n#handle_data\u51fd\u6570\u65e0\u8bba\u662f\u56de\u6d4b\u8fd8\u662f\u6a21\u62df\u4ea4\u6613\u573a\u666f\uff0c\u8fd9\u4e2a\u51fd\u6570\u4f1a\u6839\u636e\u56de\u6d4b\u9891\u7387 freq \u7684\u8bbe\u7f6e\u88ab\u8c03\u7528\u3002\u5f53freq='d'\u65f6\uff0c\u6bcf\u5929\u88ab\u8c03\u7528\u4e00\u6b21\uff0c\u5f53freq='m'\u65f6\uff0c\u6bcf\u5206\u949f\u88ab\u8c03\u7528\u4e00\u6b21\u3002\ndef handle_data(context):\n    tradingDic = timing_CK(context)   # \u91d1\u80af\u7279\u7eb3\u4ea4\u6613\u7cfb\u7edf\n    trading(tradingDic,context)       # \u57fa\u4e8e\u56fa\u5b9a\u6295\u8d44\u6bd4\u4f8b\u7684\u4ed3\u4f4d\u7ba1\u7406\u7b56\u7565\n    ",
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "metadata": {},
+       "output_type": "pyout",
+       "prompt_number": 3,
+       "text": "'{\"information\": 3.07091, \"benchmark_cumulative_return\": {\"1430784000000\": 0.3384734989, \"1425427200000\": 0.0280777664, \"1430956800000\": 0.3015673817, \"1425254400000\": 0.0485908706, \"1430870400000\": 0.3258045825, \"1427068800000\": 0.1565547302, \"1423612800000\": -7.86166e-05, \"1432684800000\": 0.5086900439, \"1426550400000\": 0.0939701082, \"1430697600000\": 0.3940583335, \"1431475200000\": 0.3738800777, \"1427932800000\": 0.2010225979, \"1423785600000\": 0.0103191542, \"1426464000000\": 0.0789892819, \"1432598400000\": 0.5137826514, \"1429142400000\": 0.3142217395, \"1432512000000\": 0.4848342792, \"1422835200000\": -0.023419006, \"1425945600000\": 0.0251048949, \"1431907200000\": 0.3321550552, \"1426636800000\": 0.1198669924, \"1427155200000\": 0.156842991, \"1425600000000\": 0.0128494434, \"1429228800000\": 0.3382696782, \"1423180800000\": -0.0355143126, \"1423094400000\": -0.0196366749, \"1424908800000\": 0.0384085675, \"1427414400000\": 0.1564499081, \"1430265600000\": 0.39015371, \"1429488000000\": 0.3166588535, \"1428451200000\": 0.2508189227, \"1432080000000\": 0.3845020513, \"1425859200000\": 0.0300955919, \"1431993600000\": 0.3776012625, \"1431302400000\": 0.3657534526, \"1425340800000\": 0.0214040921, \"1423699200000\": 0.002469143, \"1430092800000\": 0.3998381081, \"1423440000000\": -0.0257600331, \"1427241600000\": 0.1473391199, \"1426204800000\": 0.0533631882, \"1424822400000\": 0.0129105897, \"1428883200000\": 0.2872941046, \"1429833600000\": 0.3692795518, \"1429574400000\": 0.3449724696, \"1426118400000\": 0.0461362862, \"1428537600000\": 0.2410180556, \"1424044800000\": 0.0189524195, \"1432166400000\": 0.4095603586, \"1427760000000\": 0.1795981237, \"1426723200000\": 0.118026782, \"1428364800000\": 0.2404065933, \"1432771200000\": 0.4075308861, \"1424995200000\": 0.0403128358, \"1423526400000\": -0.0079926857, \"1433116800000\": 0.4780441359, \"1429660800000\": 0.3801024345, \"1422921600000\": 0.0008909879, \"1430352000000\": 0.3830374535, \"1424131200000\": 0.0256027999, \"1431648000000\": 0.3444803881, \"1423008000000\": -0.0094980477, \"1429056000000\": 0.2754841471, \"1427328000000\": 0.1501314644, \"1426032000000\": 0.0262812319, \"1428624000000\": 0.2649757308, \"1428969600000\": 0.2922760665, \"1426809600000\": 0.1334094264, \"1430179200000\": 0.3806993382, \"1427673600000\": 0.1903656836, \"1431561600000\": 0.3687379709, \"1431043200000\": 0.3272808272, \"1432252800000\": 0.4416941582, \"1428019200000\": 0.2143466525, \"1432857600000\": 0.4095166827, \"1425513600000\": 0.0180381378, \"1429747200000\": 0.3804169008, \"1427846400000\": 0.2007663661, \"1431388800000\": 0.3823182574}, \"benchmark_annualized_return\": 2.44338, \"turnover_rate\": 3.90342, \"max_drawdown\": 0.05593, \"beta\": 0.81512, \"sharpe\": 17.85741, \"alpha\": 3.62358, \"volatility\": 0.31286, \"annualized_return\": 5.62164, \"cumulative_return\": {\"1430784000000\": 0.3446243333, \"1425427200000\": 0.0972885092, \"1430956800000\": 0.3085279246, \"1425254400000\": 0.1046764792, \"1430870400000\": 0.3433141373, \"1427068800000\": 0.197748591, \"1423612800000\": 0.040858719, \"1432684800000\": 0.756836193, \"1426550400000\": 0.1365125329, \"1430697600000\": 0.3843193088, \"1431475200000\": 0.4754232012, \"1427932800000\": 0.2723332908, \"1423785600000\": 0.052365559, \"1426464000000\": 0.1319215269, \"1432598400000\": 0.716253763, \"1429142400000\": 0.3291379123, \"1432512000000\": 0.6419334941, \"1422835200000\": 0.0120949071, \"1425945600000\": 0.0866640188, \"1431907200000\": 0.5063647329, \"1426636800000\": 0.1531977128, \"1427155200000\": 0.210957141, \"1425600000000\": 0.0690698709, \"1429228800000\": 0.3316306146, \"1423180800000\": 0.0022964515, \"1423094400000\": 0.0158559943, \"1424908800000\": 0.074544568, \"1427414400000\": 0.2110690908, \"1430265600000\": 0.3654968293, \"1429488000000\": 0.2934704846, \"1428451200000\": 0.2991589792, \"1432080000000\": 0.5573219941, \"1425859200000\": 0.0757432729, \"1431993600000\": 0.5374934929, \"1431302400000\": 0.4223249012, \"1425340800000\": 0.0738324592, \"1423699200000\": 0.045465099, \"1430092800000\": 0.3860471017, \"1423440000000\": -0.0097594993, \"1427241600000\": 0.2138653859, \"1426204800000\": 0.099317603, \"1424822400000\": 0.065598368, \"1428883200000\": 0.3444113407, \"1429833600000\": 0.3735066566, \"1429574400000\": 0.3249941358, \"1426118400000\": 0.0925657839, \"1428537600000\": 0.2679498276, \"1424044800000\": 0.075828969, \"1432166400000\": 0.5883129941, \"1427760000000\": 0.2225454308, \"1426723200000\": 0.1584040839, \"1428364800000\": 0.3188022992, \"1432771200000\": 0.663524173, \"1424995200000\": 0.0812482392, \"1423526400000\": 0.0136998551, \"1433116800000\": 0.8172940708, \"1429660800000\": 0.3568157503, \"1422921600000\": 0.022844443, \"1430352000000\": 0.370473976, \"1424131200000\": 0.078341029, \"1431648000000\": 0.4682900812, \"1423008000000\": 0.0175226148, \"1429056000000\": 0.3071319807, \"1427328000000\": 0.1970909132, \"1426032000000\": 0.0833919788, \"1428624000000\": 0.3074091048, \"1428969600000\": 0.3465126707, \"1426809600000\": 0.1762344239, \"1430179200000\": 0.3450483159, \"1427673600000\": 0.2217288008, \"1431561600000\": 0.4680309612, \"1431043200000\": 0.3523664692, \"1432252800000\": 0.5892520341, \"1428019200000\": 0.3043830692, \"1432857600000\": 0.7149847569, \"1425513600000\": 0.0927431118, \"1429747200000\": 0.3813722166, \"1427846400000\": 0.2528127308, \"1431388800000\": 0.4634832112}}'"
+      }
+     ],
+     "trading_days": ""
+    }
+   ],
+   "metadata": {}
+  }
+ ]
+}
