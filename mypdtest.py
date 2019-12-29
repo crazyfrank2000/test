@@ -60,7 +60,7 @@ df = pd.DataFrame(dict_data)
 df.head()
 
 # 通过标签获取数据
-df[0]
+#df[0]
 
 
 
