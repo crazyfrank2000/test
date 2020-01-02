@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4230e628-0aec-48c6-8eeb-a33d39e81c3e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/npy_mytest.py" beforeDir="false" afterPath="$PROJECT_DIR$/npy_mytest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,17 +83,29 @@
       <option name="presentableId" value="Default" />
       <updated>1577441581371</updated>
     </task>
+    <task id="LOCAL-00001" summary="2020.1.1 test git with pycharm">
+      <created>1577968987725</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577968987725</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2020.1.1 test git with pycharm" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020.1.1 test git with pycharm" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="125" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577964084853">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="184" y="125" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1577964084853" />
-    <state x="342" y="66" key="CommitChangelistDialog2" timestamp="1577964215712">
+    <state x="342" y="66" key="CommitChangelistDialog2" timestamp="1577968987495">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="342" y="66" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1577964215712" />
+    <state x="342" y="66" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1577968987495" />
     <state width="1379" height="217" key="GridCell.Tab.0.bottom" timestamp="1577963931723">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -110,6 +122,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1379" height="217" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1577963931723" />
+    <state x="320" y="203" key="Vcs.Push.Dialog.v2" timestamp="1577968996855">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="203" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1577968996855" />
     <state width="700" height="418" key="XDebugger.FullValuePopup" timestamp="1577963964492">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -122,9 +138,9 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="374" y="296" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1577963450246" />
-    <state x="503" y="386" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577964171108">
+    <state x="503" y="386" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577969116250">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="503" y="386" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1577964171108" />
+    <state x="503" y="386" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1577969116250" />
   </component>
 </project>
