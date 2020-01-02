@@ -106,17 +106,61 @@ seq[3:4] = [6, 3]
 print(seq[:5])
 print(seq[3:])
 
+# build in  seq functions
+# enumerate
+
+some_list=['foo','bar','baz']
+mapping = {}
+
+for i,v in enumerate(some_list):
+    mapping[v]=i
+
+#sorted
+print(sorted([7,1,2,6,0,3,2]))
+
 ""
+
 #to test the git function
 
 #2020.1.1
 
-"""
---------------------------end of today--------------------------------------------------
+
 my_dict={'a':1,'b':2,'c':3}
 print(my_dict.get('a'))
 print(my_dict)
 
+d1= {'a':'some value','b':[1,2,3,4]}
+d1[7] = 'an interger'
+d1['dummy'] = 'another value'
+d1[5]='some value'
+print(d1)
+del d1[5]
+print(d1)
+ret = d1.pop('dummy')
+print(d1)
+print(ret)
+
+ls_dict=list(d1.keys())
+print(ls_dict)
+ls_dict_value=list(d1.values())
+print(ls_dict_value)
+
+#valid dict key types
+#hashable: can be used as a key in a dict ,the keys have to be immutable obj like scalar type(int , float, string)
+
+#set is an unorder collection of unique elements.like a key-only dict
+s1=set([2,2,2,1,3,3])
+
+#set operation : union,intersection,difference,and symmetric difference
+a={1,2,3,4,5}
+b={3,4,5,6,7,8}
+print(a.union(b))
+print(a.intersection(b))
+print(a|b)
+print(a&b)
+
+"""""
+--------------------------end of today--------------------------------------------------
 
 
 Now the numpy test code here 
