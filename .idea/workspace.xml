@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4230e628-0aec-48c6-8eeb-a33d39e81c3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/npy_mytest.py" beforeDir="false" afterPath="$PROJECT_DIR$/npy_mytest.py" afterDir="false" />
-    </list>
+    <list default="true" id="4230e628-0aec-48c6-8eeb-a33d39e81c3e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,23 +124,52 @@
       <option name="project" value="LOCAL" />
       <updated>1577969399866</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2020.1.1 test git with pycharm 11">
+      <created>1577971117926</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1577971117926</updated>
+    </task>
+    <task id="LOCAL-00009" summary="2020.1.1 with dict list, sets etc">
+      <created>1577971222438</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1577971222438</updated>
+    </task>
+    <task id="LOCAL-00010" summary="2020.1.1 with dict list, sets etc">
+      <created>1577971265257</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1577971265257</updated>
+    </task>
+    <task id="LOCAL-00011" summary="2020.1.1 with dict list, sets etc">
+      <created>1577971341861</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1577971341861</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2020.1.1 test git with pycharm" />
     <MESSAGE value="2020.1.1 test git with pycharm 11" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020.1.1 test git with pycharm 11" />
+    <MESSAGE value="2020.1.1 with dict list, sets etc" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020.1.1 with dict list, sets etc" />
   </component>
   <component name="WindowStateProjectService">
     <state x="184" y="125" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577964084853">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="184" y="125" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1577964084853" />
-    <state x="342" y="66" key="CommitChangelistDialog2" timestamp="1577971265101">
+    <state x="342" y="66" key="CommitChangelistDialog2" timestamp="1577971341732">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="342" y="66" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1577971265101" />
+    <state x="342" y="66" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1577971341732" />
     <state x="144" y="99" key="DiffContextDialog" timestamp="1577971248429">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -164,6 +190,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1379" height="217" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1577963931723" />
+    <state x="538" y="176" key="RollbackChangesDialog" timestamp="1577971339385">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="538" y="176" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1577971339385" />
     <state x="320" y="203" key="Vcs.Push.Dialog.v2" timestamp="1577969403525">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
